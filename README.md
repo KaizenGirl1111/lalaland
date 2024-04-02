@@ -5,7 +5,7 @@ This React project lets you visualize and analyze system logs and metrics with a
 ## Features
 - **Timestamp Filter:** Narrow down logs and metrics to a specific time range for focused analysis. ⏱️
 - **Interactive Charts (Chart.js):** Visualize trends and patterns in your data using four customizable charts (line and area).
-- **Real-time Log Stream (Optional):** View system logs as they occur, filtered by your chosen timestamp range and seamlessly integrated with previously loaded entries. (Real-time functionality depends on your API's capabilities)
+- **Real-time Log Stream :** View system logs as they occur, filtered by your chosen timestamp range and seamlessly integrated with previously loaded entries. (Real-time functionality depends on your API's capabilities)
 - **Storybook Integration:** Develop and showcase isolated components for efficient development and maintenance. ️
 
 ## Finding Functionality
