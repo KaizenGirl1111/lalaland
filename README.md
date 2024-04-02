@@ -33,7 +33,7 @@ function Logs() {
 }
 
 export default Logs;
-
+````
 ### b) Chart with Sample Data (`src/components/Metrics.jsx`):
 
 ```javascript
@@ -61,7 +61,7 @@ function Metrics() {
 }
 
 export default Metrics;
-
+````
 ## Available Scripts
 
 In the project directory, you can run:
