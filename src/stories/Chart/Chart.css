@@ -1,0 +1,27 @@
+.graph {
+    background-color: white;
+    border: 1px solid #CEE0F8;
+    padding: 20px;
+    border-radius: 5px;
+    width:42rem;
+    margin: 1.5rem 0px;
+}
+
+.chart-wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chart-sub-wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 93%;
+}
+
+.spin {
+    height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+}

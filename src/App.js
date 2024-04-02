@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { CategoryScale } from "chart.js";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import Matrics from "./Metrics";
+import Logs from "./Logs";
+
+import Chart from "chart.js/auto";
+
+Chart.register(CategoryScale);
 
 function App() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const currentPath = location.pathname;
+
+  useEffect(() => {
+    if (currentPath === "/") {
+      navigate("/metrics");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route exact path="/metrics" element={<Matrics />} />
+      <Route exact path="/logs" element={<Logs />} />
+    </Routes>
   );
 }
 

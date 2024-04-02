@@ -1,0 +1,60 @@
+.storybook-header {
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px 15px 5px 40px;
+  display: flex;
+  align-items: center !important;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.storybook-header svg {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.storybook-header h1 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  margin: 6px 0 6px 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.storybook-header button + button {
+  margin-left: 10px;
+}
+
+.storybook-header .welcome {
+  color: #333;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.menu {
+  width: -webkit-fill-available;
+  border: none;
+  
+}
+
+.inside-menu {
+  border: none;
+  text-transform: capitalize;
+  font-style: "Lab Grotesque";
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.block{
+  display: flex !important;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 10px;
+}

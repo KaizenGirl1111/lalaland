@@ -1,0 +1,20 @@
+.text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16.8px;
+  font-style: "Work Sans";
+}
+
+.log-Screen-wrapper {
+  height: calc(100vh - 80px) !important;
+}
+
+.text-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.log-screen {
+  max-height: 600px !important;
+}
