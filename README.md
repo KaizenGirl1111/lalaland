@@ -1,6 +1,66 @@
-# Getting Started with Create React App
+# React Logs & Metrics Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This React project lets you visualize and analyze system logs and metrics with a user-friendly interface.
+
+## Features
+- **Timestamp Filter:** Narrow down logs and metrics to a specific time range for focused analysis. ⏱️
+- **Interactive Charts (Chart.js):** Visualize trends and patterns in your data using four customizable charts (line and area).
+- **Real-time Log Stream (Optional):** View system logs as they occur, filtered by your chosen timestamp range and seamlessly integrated with previously loaded entries. (Real-time functionality depends on your API's capabilities)
+- **Storybook Integration:** Develop and showcase isolated components for efficient development and maintenance. ️
+
+## Finding Functionality
+| Location                    | Functionality                                                   |
+|-----------------------------|-----------------------------------------------------------------|
+| src/components/Logs.jsx     | Timestamp filtering, real-time log display, previous log loading |
+| src/components/Metrics.jsx  | Interactive charts (Chart.js)                                    |
+| src/hooks/getTimeStampList.js | Utility hook for generating timestamp options                  |
+| .storybook directory        | Individual component showcasing and testing                      |
+
+## Code Snippets
+### a) Timestamp Filter (`src/components/Logs.jsx`):
+
+```javascript
+import React, { useState, useEffect } from 'react';
+
+function Logs() {
+  const [selectedTimestamp, setSelectedTimestamp] = useState('lastHour'); // Default selection
+
+  const handleTimestampChange = (event) => {
+    setSelectedTimestamp(event.target.value);
+  };
+
+  // ... (Rest of your Logs component logic)
+}
+
+export default Logs;
+
+### b) Chart with Sample Data (`src/components/Metrics.jsx`):
+
+```javascript
+import React from 'react';
+import { Chart } from 'react-chartjs-2';
+
+const sampleData = {
+  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+  datasets: [
+    {
+      label: 'Metric A',
+      data: [10, 20, 30, 50, 25, 40],
+      borderColor: 'rgba(255, 99, 132, 1)',
+      backgroundColor: 'rgba(255, 99, 132, 0.2)',
+    },
+  ],
+};
+
+function Metrics() {
+  return (
+    <div>
+      <Chart type="line" data={sampleData} options={{ /* Your chart options */ }} />
+    </div>
+  );
+}
+
+export default Metrics;
 
 ## Available Scripts
 
